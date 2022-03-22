@@ -43,7 +43,16 @@
 
     function login() {
 
+     const code = document.getElementById("code").value
 
+     if(code == '12345') {
+
+      const video = document.getElementById("video-preview")
+      const settings = document.getElementById("settings-prompt")
+      video.removeAttribute("hidden")
+      settings.removeAttribute("hidden")
+
+     }
 
 
     }
@@ -54,16 +63,19 @@
 
 <div id="login">
 
-  <div>
-    <div class="room-name-input-container">
+  
+    <div>
       <input id="code" class="block username" type="password">
       <label>Código </label>
+      <button onclick="login();">
+        <i data-icon="connectivity-cancel"></i>
+      </button>
       <p class="error-room error-text">
         <i data-icon="warning"></i>
         Por favor entre com o código para criar uma sala
       </p>
     </div>
-  </div>
+  
 </div>
 
   <form method="post">
