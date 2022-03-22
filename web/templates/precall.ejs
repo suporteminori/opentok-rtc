@@ -39,57 +39,18 @@
     <% } %>
   </div>
 
-  <script>
-
-    function login() {
-
-     const code = document.getElementById("code").value
-
-     if(code == '12345') {
-
-      const video = document.getElementById("video-preview")
-      const settings = document.getElementById("settings-prompt")
-      video.removeAttribute("hidden")
-      settings.removeAttribute("hidden")
-
-     }
-
-
-    }
-
-
-
-  </script>
-
-<div id="login">
-
-  
-    <div>
-      <input id="code" class="block username" type="password">
-      <label>Código </label>
-      <button onclick="login();">
-        <i data-icon="connectivity-cancel"></i>
-      </button>
-      <p class="error-room error-text">
-        <i data-icon="warning"></i>
-        Por favor entre com o código para criar uma sala
-      </p>
-    </div>
-  
-</div>
-
   <form method="post">
-    <div id="video-preview" hidden>
+    <div id="video-preview" >
     </div>
-    <div id="settings-prompt" hidden>
+    <div id="settings-prompt" >
       <% if (!autoGenerateRoomName && !roomName) { %>
       <div id="enter-room-name-prompt">
         <div class="room-name-input-container">
           <input id="room-name-input" class="block username" name="roomName" autocomplete="off" maxlength="46" value="<%=roomName%>">
-          <label>Room Name</label>
+          <label>Sala</label>
           <p class="error-room error-text">
             <i data-icon="warning"></i>
-            Please enter a meeting name.
+            Por favor entre com o nome da Sala.
           </p>
         </div>
       </div>
@@ -109,7 +70,7 @@
               <a id="preToggleFacingMode"> Switch </a>
             </div>
             <a id="initialVideoSwitch" class="activated">
-              <label>On</label>
+              <label hidden>Liga</label>
               <i data-icon="videoSwitch"></i>
             </a>
           </div>
@@ -117,7 +78,7 @@
         <div id="audio-settings">
           <div>
             <img alt="audio source toggle"src="/images/icons/Vlt-icon-microphone-full.svg" />
-            <span>Microphone</span>
+            <span>Microfone</span>
             <div id=audio-meter-container>
               <div id="audio-meter">
                 <div id="audio-meter-level">
@@ -129,7 +90,7 @@
             <div class="sourcePick switch-button" id="audio-switch">
               <a id="prePickMic"> Switch </a>
             </div>
-            <a id="initialAudioSwitch" class="activated">
+            <a id="initialAudioSwitch" class="activated" hidden>
               <label>On</label>
               <i data-icon="audioSwitch"></i>
             </a>
