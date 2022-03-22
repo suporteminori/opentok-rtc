@@ -39,8 +39,35 @@
     <% } %>
   </div>
 
+  <script>
+
+    function login() {
+
+
+
+
+    }
+
+
+
+  </script>
+
+<div id="login">
+
+  <div>
+    <div class="room-name-input-container">
+      <input id="code" class="block username" type="password">
+      <label>Código </label>
+      <p class="error-room error-text">
+        <i data-icon="warning"></i>
+        Por favor entre com o código para criar uma sala
+      </p>
+    </div>
+  </div>
+</div>
+
   <form method="post">
-    <div id="video-preview">
+    <div id="video-preview" hidden>
     </div>
     <div id="settings-prompt" hidden>
       <% if (!autoGenerateRoomName && !roomName) { %>
