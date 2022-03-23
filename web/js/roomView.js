@@ -572,9 +572,9 @@ BubbleFactory, LayoutManager */
       const select = document.getElementById('select-devices');
       select.style.display = 'inline-block';
       Modal.showConfirm({
-        head: 'Set mic input',
-        detail: 'Please identify the audio source in the following list:',
-        button: 'Change',
+        head: 'Definir entrada de microfone',
+        detail: 'Identifique a fonte de áudio na lista a seguir:',
+        button: 'Alterar',
       }).then((start) => {
         if (start) {
           Utils.sendEvent('roomView:setAudioSource', select.value);
