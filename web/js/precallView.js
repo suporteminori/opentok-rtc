@@ -96,7 +96,7 @@
           Modal.showConfirm({
             head: 'Definir entrada de microfone',
             detail: 'Identifique a fonte de áudio na lista a seguir:',
-            button: 'Defiir',
+            button: 'Definir',
           }, true).then((start) => {
             if (start) {
               Utils.sendEvent('roomView:setAudioSource', select.value);
