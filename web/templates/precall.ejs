@@ -1,7 +1,7 @@
 <div class="main">
   <div id="lefthand-container">
     <header>
-      <a href="http://www.vonage.com" target="_blank" rel="noopener">
+      <a href="http://www.vonage.com" target="_blank" rel="noopener" hidden>
         <img src="/images/vonage-logo-no-text.svg" alt="Vonage logo">
       </a>
       <h2>
@@ -13,7 +13,7 @@
           <%= appName %>
         <% } %>
       </h2>
-      <p>
+      <p hidden>
         <%=introText%>
       </p>
     </header>
@@ -47,7 +47,7 @@
       <div id="enter-room-name-prompt">
         <div class="room-name-input-container">
           <input id="room-name-input" class="block username" name="roomName" autocomplete="off" maxlength="46" value="<%=roomName%>">
-          <label>Entre com o nome da sala</label>
+          <label>Sala</label>
           <p class="error-room error-text">
             <i data-icon="warning"></i>
             Por favor entre com o nome da Sala.
@@ -57,7 +57,7 @@
       <% } %>
       <div class="user-name-input-container">
         <input id="user-name-input" class="block username" name="userName" autocomplete="off" data-wd="username" maxlength="46">
-        <label>Entre com o seu nome</label>
+        <label>Nome</label>
       </div>
       <div class="publish-settings">
         <div id="video-settings">
@@ -67,7 +67,7 @@
           </div>
           <div class="right-settings">
             <div class="sourcePick switch-button" id="video-switch">
-              <a id="preToggleFacingMode"> Selecione </a>
+              <a id="preToggleFacingMode"> Selecionar </a>
             </div>
             <a id="initialVideoSwitch" class="activated">
               <label hidden>Liga</label>
@@ -88,7 +88,7 @@
           </div>
           <div class="right-settings">
             <div class="sourcePick switch-button" id="audio-switch">
-              <a id="prePickMic"> Selecione </a>
+              <a id="prePickMic"> Selecionar </a>
             </div>
             <a id="initialAudioSwitch" class="activated">
               <label hidden>On</label>
@@ -115,7 +115,7 @@
         </div>
         <% } %>
         <button id="enter" class="btn" type="submit" data-wd="enterbutton" disabled>
-          <span>Entre</span>
+          <span>Criar Sala</span>
         </button>
       </div>
     </div>
