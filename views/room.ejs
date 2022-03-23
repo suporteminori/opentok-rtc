@@ -174,14 +174,14 @@
 
     <div id="top-banner">
       <div class="icon-container">
-        <a href="https://vonage.com" title="Vonage" target="_blank" rel="noopener">
+        <a href="https://vonage.com" title="Vonage" target="_blank" rel="noopener" hidden
           <i data-icon="vonage_logo"></i>
         </a>
       </div>
       <div class="center-container">
         <div class="room-info">
           <div class="name-wrapper">
-            <i id="room-locked-state" data-icon="closedLock" title="This room is locked. No additional participants may join the room."></i>
+            <i id="room-locked-state" data-icon="closedLock" title="Esta sala está trancada. Nenhum participante adicional pode entrar na sala."></i>
             <p class="room-name"><%= appName %></p>
           </div>
           <div class="participants-wrapper">
@@ -193,7 +193,7 @@
         <% if (enableStopReceivingVideo) { %>
         <div class="videoSwitch">
           <a id="videoSwitch" disabled>
-            <span>Stop receiving video</span>
+            <span>Parar video</span>
             <i data-icon="videoSwitch"></i>
           </a>
         </div>
@@ -202,11 +202,11 @@
         <div id="toggleArchiving" disabled>
           <a id="startArchiving" class="banner-dynamic-btn">
             <i data-icon="start_archive"></i>
-            <span>Record</span>
+            <span>Gravar</span>
           </a>
           <a id="stopArchiving" class="banner-dynamic-btn">
             <i data-icon="stop_archive"></i>
-            <span class="duration">Stop Recording</span>
+            <span class="duration">Parar Gravação</span>
           </a>
         </div>
         <%      if(enableArchiveManager) { %>
@@ -216,7 +216,7 @@
         <% } } %>
         <a class="banner-dynamic-btn invite-btn" id="addToCall">
           <i data-icon="add"></i>
-          <span>Invite</span>
+          <span>Convite</span>
         </a>
         <a id="chooseLayout">
           <div id="options-container">
@@ -236,39 +236,39 @@
           <button id="endCall" disabled>
             <i data-icon="end_call"></i>
           </button>
-          <p>Leave</p>
+          <p>Sair</p>
         </div>
         <div>
           <button id="toggle-publisher-video" class="selected" disabled>
             <i data-icon="no_video" data-event-name="roomView:buttonClick" data-action="video" data-stream-id="publisher" data-stream-type="publisher"></i>
           </button>
-          <p>Your Video</p>
+          <p>Video</p>
         </div>
         <div>
           <button id="toggle-publisher-audio" disabled>
             <i data-icon="mic-muted"></i>
           </button>
-          <p>Your Mic</p>
+          <p>Microfone</p>
         </div>
         <div id="addToCall-container">
           <button id="addToCall">
             <i data-icon="add"></i>
           </button>
-          <p>Invite</p>
+          <p>Convidar</p>
         </div>
         <% if (enableScreensharing) { %>
         <div id="screen-share-container">
           <button id="screen-share" disabled>
             <i data-icon="screenshare"></i>
           </button>
-          <p>Share Screen</p>
+          <p>Compartilhar Tela</p>
         </div>
         <% if (enableAnnotation) { %>
         <div id="annotate-button-container">
           <button id="annotate" disabled>
             <i data-icon="annotate"></i>
           </button>
-          <p>Annotate</p>
+          <p>Anotações</p>
         </div>
         <% } } %>
         <div>
@@ -284,7 +284,7 @@
 
     <% if (feedbackUrl) { %>
       <section class="feedbackButton">
-        <span id="showFeedback">Feedback / Report a Bug</span>
+        <span id="showFeedback">Feedback </span>
       </section>
     <% } %>
 
@@ -294,7 +294,7 @@
 
           <div class="chat-title">
             <i data-icon="message_silver"></i>
-            <span>Messaging</span>
+            <span>Mensagem</span>
           </div>
           <i id="closeChat" data-icon="close_silver"></i>
         </header>
@@ -303,10 +303,10 @@
           </ul>
         </div>
         <footer>
-          <textarea id="msgText" placeholder="Type your message..." required></textarea>
-          <button id="sendTxt" type="submit" alt="Send Message" data-icon="send" class="btn btn-purple btn-padding btn-padding-small"></button>
+          <textarea id="msgText" placeholder="Digite sua mensagem..." required></textarea>
+          <button id="sendTxt" type="submit" alt="Enviar Mensagem" data-icon="send" class="btn btn-purple btn-padding btn-padding-small"></button>
           <% if (enableEmoji) { %>
-            <button id="addEmoji" alt="Add Emoji"  data-icon="emoji" class="btn1"></button>
+            <button id="addEmoji" alt="Adicionar Emoji"  data-icon="emoji" class="btn1"></button>
           <% } %>
         </footer>
         <% if (enableEmoji) { %>
@@ -323,15 +323,15 @@
           <p class="errorDescription"></p>
         </section>
         <section id="screenShareErrorInstall">
-          <header>You need a Chrome extension to share your screen.</header>
-            <p>Once you have installed it, refresh your browser and click 'share screen' again.</p>
+          <header>Você precisa de uma extensão do Chrome para compartilhar sua tela.</header>
+            <p>Depois de instalá-lo, atualize seu navegador e clique em 'compartilhar tela' novamente.</p>
             <footer>
               <button class="btn btn-purple btn-padding delete-archive">Install extension</button>
             </footer>
         </section>
         <section id="extInstallationSuccessful">
-          <header>You need a Chrome extension to share your screen.</header>
-          <p>Once you have installed it, refresh your browser and click 'share screen' again.</p>
+          <header>Você precisa de uma extensão do Chrome para compartilhar sua tela</header>
+          <p>Depois de instalá-lo, atualize seu navegador e clique em 'compartilhar tela' novamente.</p>
           <footer>
             <button id="scrShrLater" class="btn btn-white btn-padding">Later</button>
             <button id="scrShrReload" class="btn btn-purple btn-padding">Reload</button>
@@ -342,9 +342,9 @@
 
     <section for="viewRecordings" class="bubble" data-recordings="loading">
       <div class="bubble-content top-arrow">
-        <p class="title recordings">Your recordings</p>
-        <p class="title no-recordings">No recordings</p>
-        <p class="title loading">Loading archived recordings...</p>
+        <p class="title recordings">Suas gravações</p>
+        <p class="title no-recordings">Sem gravações</p>
+        <p class="title loading">Carregando arquivos de gravações...</p>
         <div class="tc-list videos">
           <ul></ul>
         </div>
@@ -358,33 +358,33 @@
             <div class="source-pick-container">
               <div id="lockRoomContainer" class="sourcePick icon-with-text">
                 <a id="lockRoom"><i id="lock-room-icon" data-icon="openLock"></i></a>
-                <span id="lock-msg">Lock Meeting</span>
+                <span id="lock-msg">Trancar Reunião</span>
               </div>
             </div>
           <% } %>
           <div class="source-pick-container">
             <div id="pickMicContainer" class="sourcePick icon-with-text">
               <a id="pickMic"><i data-icon="pmic"></i></a>
-              <span>Switch Microphone</span>
+              <span>Alterar Microfone</span>
             </div>
           </div>
           <div class="source-pick-container">
             <div id="pickCamContainer" class="sourcePick icon-with-text">
               <a id="toggleFacingMode"><i data-icon="cycleVideo"></i></a>
-              <span>Switch Camera</span>
+              <span>Alterar Camera</span>
             </div>
           </div>
         <% if (enableMuteAll) { %>
           <div class="source-pick-container">
             <div id="muteAllContainer" class="sourcePick icon-with-text">
               <a id="muteAllIconButton"><i data-icon="muteAllButton"></i></a>
-              <span>Mute all participants</span>
+              <span>Silenciar todos os Participantes</span>
             </div>
           </div>
         <% } %>
         </div>
         <div id="layout-manager">
-          <span id="layout-title">Layout Manager</span>
+          <span id="layout-title">Layout</span>
           <ul>
             <li><a data-layout-type="float"></a></li>
             <li><a data-layout-type="f2f_horizontal"></a></li>
@@ -501,7 +501,7 @@
     <section class="tc-modal room-unlocked-modal">
       <form id="room-unlocked-alert" class="tc-dialog">
         <i data-icon="openLock"></i>
-        <span> Meeting unlocked </span>
+        <span> Reunião destrancada </span>
       </form>
     </section>
 

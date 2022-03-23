@@ -34,61 +34,61 @@ BubbleFactory, LayoutManager */
 
   const MODAL_TXTS = {
     mute: {
-      head: 'Mute all participants, including yourself',
-      detail: 'Everyone will be notified and can click their <i data-icon="no_mic"></i> button'
-              + ' to unmute themselves.',
-      button: 'Mute all participants',
+      head: 'Silenciar todos os participantes, incluindo você',
+      detail: 'Todos serão notificados e poderão clicar no botão <i data-icon="no_mic"></i>'
+              + 'para ativar o som.',
+      button: 'Silenciar todos os participantes',
     },
     muteRemotely: {
-      head: 'All participants microphones are being disabled in the call',
-      detail: 'If you want to keep talking, '
-              + 'you must manually enable your own microphone.',
-      button: 'I understand',
+      head: 'Todos os microfones dos participantes estão sendo desativados na chamada',
+      detail: 'Se você quiser continuar falando, '
+              + 'você deve habilitar manualmente seu próprio microfone.',
+      button: 'Eu entendo',
     },
     unmutedRemotely: {
-      head: 'Your microphone is now enabled in the call',
-      detail: 'If you want to remain muted, '
-              + 'you must manually disable your own microphone.',
-      button: 'I understand',
+      head: 'Seu microfone agora está ativado na chamada',
+      detail: 'Se você quiser permanecer mudo, '
+              + 'você deve desativar manualmente seu próprio microfone.',
+      button: 'Eu entendo',
     },
     join: {
-      head: 'All participants are muted',
-      detail: 'You can unmute everyone by toggling the Mute all participants option. Or you can '
-              + 'unmute just yourself by clicking the microphone icon in the bottom menu.',
-      button: 'I understand',
+      head: 'Todos os participantes estão silenciados',
+      detail: 'Você pode ativar o som de todos alternando a opção Silenciar todos os participantes. Ou você pode '
+              + 'ativar apenas você mesmo clicando no ícone do microfone no menu inferior.',
+      button: 'Eu entendo',
     },
     lock: {
-      head: 'Do you want to lock the meeting?',
-      detail: 'When a meeting room is locked, no one else will be allowed to join the meeting. '
-              + 'Current participants who leave the meeting will not be allowed back in.',
-      button: 'Lock Meeting',
+      head: 'Você quer bloquear a reunião?',
+      detail: 'Quando uma sala de reunião está bloqueada, ninguém mais terá permissão para entrar na reunião. '
+              + 'Os participantes atuais que deixarem a reunião não poderão voltar.',
+      button: 'Bloquear reunião',
     },
     endCall: {
-      head: 'Do you want to leave the meeting?',
-      detail: 'The meeting will continue with the remaining participants.',
-      button: 'Leave meeting',
+      head: 'Você quer sair da reunião?',
+      detail: 'A reunião continuará com os demais participantes.',
+      button: 'Sair da reunião',
     },
     endLockedCall: {
-      head: 'Do you want to unlock the meeting before leaving?',
-      detail: 'The meeting will continue with the remaining participants. When a meeting room is locked, no one else will be allowed to join or re-join the meeting.',
-      button: 'Unlock and Leave',
-      altButton: 'Leave Without Unlocking',
+      head: 'Você quer desbloquear a reunião antes de sair?',
+      detail: 'A reunião continuará com os demais participantes. Quando uma sala de reunião está bloqueada, ninguém mais poderá entrar ou entrar novamente na reunião.',
+      button: 'Desbloquear e sair',
+      altButton: 'Sair sem desbloquear',
     },
     sessionDisconnected: {
-      head: 'Session disconected',
-      detail: 'The connection to the OpenTok platform has been lost. Check your network '
-              + 'connectivity and press Reload to connect again.',
-      button: 'Reload',
+      head: 'Sessão desconectada',
+      detail: 'A conexão com a plataforma OpenTok foi perdida. Verifique sua rede '
+              + 'conectividade e pressione Atualizat para conectar novamente.',
+      button: 'Atualizat',
     },
     chromePublisherError: {
-      head: 'Internal Chrome Error',
-      detail: 'Failed to acquire microphone. This is a known Chrome bug. Please completely quit '
-              + 'and restart your browser.',
-      button: 'Reload',
+      head: 'Erro interno do Chrome',
+      detail: 'Falha ao adquirir o microfone. Este é um bug conhecido do Chrome. Por favor, saia completamente '
+              + 'e reinicie seu navegador.',
+      button: 'Atualizar',
     },
-    meetingFullError: {
-      head: 'Meeting Full',
-      detail: `This meeting has reached the full capacity of ${window.maxUsersPerRoom} participants. Try&nbsp;joining later.`,
+    MeetingFullError: {
+      head: 'Reunião Cheia',
+      detail: `Esta reunião atingiu a capacidade total de ${window.maxUsersPerRoom} participantes. Tente&nbsp;entrar mais tarde.`,
       button: 'OK',
     },
   };
